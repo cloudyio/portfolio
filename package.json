@@ -16,7 +16,9 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.9.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@types/node": "^22.10.1",
 		"autoprefixer": "^10.4.20",
+		"daisyui": "^4.12.14",
 		"eslint": "^9.7.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
@@ -32,6 +34,8 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "^0.5.15"
+		"@tailwindcss/typography": "^0.5.15",
+		"lucide": "^0.464.0",
+		"lucide-svelte": "^0.464.0"
 	}
 }
