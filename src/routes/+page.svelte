@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<button on:click={() => document.getElementById('aboutme').scrollIntoView()}>
+<button on:click={() => document.getElementById('aboutme')!.scrollIntoView()}>
     <CircleArrowDown size="35" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 hover:fill-gray" />
     
 </button>
