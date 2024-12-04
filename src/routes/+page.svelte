@@ -1,5 +1,10 @@
 <script lang="ts">
+    import { formatDate } from '$lib/utils'
+	import * as config from '$lib/config'
     import { CircleArrowDown } from 'lucide-svelte';
+
+    let { data } = $props();
+    //languages
     import C from '../icons/languages/c.svg?url';
     import Python from '../icons/languages/python.svg?url';
     import Javascript from '../icons/languages/javascript.svg?url';
@@ -63,6 +68,8 @@
         const result = await response.json();
         document.getElementById('response-message')!.textContent = result.message;
     }
+
+    
 </script>
 
 <div class="flex flex-col justify-center items-center min-h-screen px-4 bg-base-100">
@@ -176,21 +183,26 @@
 <div class="flex flex-col justify-center items-center min-h-screen py-10 bg-base-100 px-4" id="blog">
     <h1 class="font-semibold text-5xl mb-6">Blog</h1>
     <p class="text-lg font-semibold mt-5 max-w-3xl mx-auto text-center">
-        Read my latest blog posts about web development, cloud computing, and more!
+        Read my latest blog posts
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
-        <!-- Example blog post -->
-        <div class="p-4 bg-base-300 shadow-md rounded-lg">
-            <img src="/blog1.png" alt="Blog Post 1" class="w-full h-40 object-cover rounded-lg">
-            <h3 class="font-semibold text-xl mt-4">Understanding Svelte</h3>
-            <p class="text-sm text-gray-600 mt-2">
-                A deep dive into the Svelte framework and why it's a great choice for modern web development.
-            </p>
-            <a href="/blog/understanding-svelte" class="btn btn-secondary mt-4">Read More</a>
-        </div>
-        <!-- Add more blog posts as needed -->
-    </div>
+    <ul class="posts grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mt-8 mx-8">
+        {#each data.posts.slice(0, 3) as post}
+            <li class="post col-span-1 mx-4">
+                <div class="p-6 bg-base-300 shadow-md rounded-lg w-96">
+                    <img src="/blog1.png" alt="Blog Post 1" class="w-full h-40 object-cover rounded-lg">
+                    <h3 class="font-semibold text-xl mt-4">{post.title}</h3>
+                    <p class="text-sm text-gray-600 mt-2">
+                        {post.description}
+                    </p>
+                    <p class="text-sm text-gray-500 mt-2">
+                        {formatDate(post.date)}
+                    </p>
+                    <a href="/blog/understanding-svelte" class="btn btn-secondary mt-4">Read More</a>
+                </div>
+            </li>
+        {/each}
+    </ul>
 </div>
 
 <div class="flex flex-col justify-center items-center min-h-screen py-10 bg-base-100 px-4" id="contact">

@@ -24,6 +24,7 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
 		"globals": "^15.0.0",
+		"mdsvex": "^0.12.3",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.6",
 		"prettier-plugin-tailwindcss": "^0.6.5",
@@ -35,9 +36,13 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@fontsource/atkinson-hyperlegible": "^5.1.0",
+		"@fontsource/jetbrains-mono": "^5.1.1",
 		"@tailwindcss/typography": "^0.5.15",
 		"emailjs-com": "^3.2.0",
 		"lucide": "^0.464.0",
-		"lucide-svelte": "^0.464.0"
+		"lucide-svelte": "^0.464.0",
+		"open-props": "^1.7.7",
+		"shiki": "^1.24.0"
 	}
 }
