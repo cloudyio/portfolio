@@ -171,7 +171,26 @@
             <a href="https://github.com/cloudyio/logify" class="btn btn-secondary mt-4">View Repository</a>
         </div>
     </div>
+</div>
 
+<div class="flex flex-col justify-center items-center min-h-screen py-10 bg-base-100 px-4" id="blog">
+    <h1 class="font-semibold text-5xl mb-6">Blog</h1>
+    <p class="text-lg font-semibold mt-5 max-w-3xl mx-auto text-center">
+        Read my latest blog posts about web development, cloud computing, and more!
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
+        <!-- Example blog post -->
+        <div class="p-4 bg-base-300 shadow-md rounded-lg">
+            <img src="/blog1.png" alt="Blog Post 1" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="font-semibold text-xl mt-4">Understanding Svelte</h3>
+            <p class="text-sm text-gray-600 mt-2">
+                A deep dive into the Svelte framework and why it's a great choice for modern web development.
+            </p>
+            <a href="/blog/understanding-svelte" class="btn btn-secondary mt-4">Read More</a>
+        </div>
+        <!-- Add more blog posts as needed -->
+    </div>
 </div>
 
 <div class="flex flex-col justify-center items-center min-h-screen py-10 bg-base-100 px-4" id="contact">
