@@ -11,10 +11,10 @@
 	<div class="flex-none">
 	  <ul class="menu menu-horizontal px-1 font-medium">
 			<li class="flex items-center">
-					<a class="btn btn-ghost text-lg" href="/">About</a>
+					<a class="btn btn-ghost text-lg"  onclick={() => document.getElementById('aboutme')?.scrollIntoView({ behavior: 'smooth' })}>About</a>
 			</li>
 			<li class="flex items-center">
-					<a class="btn btn-ghost text-lg" href="/">Projects</a>
+					<a class="btn btn-ghost text-lg" onclick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>Projects</a>
 			</li>
 			<li class="flex items-center">
 				<button class="btn btn-secondary text-lg"><a href="/">Contact</a></button>
