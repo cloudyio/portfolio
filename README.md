@@ -1,38 +1,22 @@
-# sv
+# Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A beautiful, modern portfolio for myself
 
-## Creating a project
+# Technologies
+- sveltekit
+- daisyui
+- Lucide
+- mdsvex
 
-If you're seeing this, you've probably already done this step. Congrats!
+# Features
+- ssr
+- markdown blog posts
+- beautiful ui
+- fully customisable
 
-```bash
-# create a new project in the current directory
-npx sv create
+# How to run:
+1. install packages with `npm install`
+2. you can either run for development with `npm run dev` or you can build for prod with `npm run build`
+3. blog posts can be created by going into src/posts and making a markdown file, use the one already there as a template sort of 
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Credit to this [tutorial](https://joyofcode.xyz/sveltekit-markdown-blog#rendering-a-single-post) for the blog system!

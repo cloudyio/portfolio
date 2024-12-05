@@ -151,26 +151,24 @@
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
-        <div class="p-4 bg-base-300 shadow-md rounded-lg">
+        <div class="p-4 bg-base-300 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
             <img src="/capsule.png" alt="Project 1" class="w-full h-40 object-cover rounded-lg">
             <h3 class="font-semibold text-xl mt-4">Time Capsule</h3>
             <p class="text-sm text-gray-600 mt-2">
                 A cool website that allows you to store a message then lock it until a future date using local storage
             </p>
-            <a href="https://capsule.cloudyio.me" class="btn btn-secondary mt-9">View Project</a>
+            <a href="https://capsule.cloudyio.me" class="btn btn-secondary mt-4">View Project</a>
         </div>
-    
-        <div class="p-4 bg-base-300 shadow-md rounded-lg">
+        <div class="p-4 bg-base-300 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
             <img src="/dishdash.png" alt="Project 2" class="w-full h-40 object-cover rounded-lg">
             <h3 class="font-semibold text-xl mt-4">Dish Dash</h3>
             <p class="text-sm text-gray-600 mt-2">
                 Mainly a test project, grabs a random recipe from an API and wraps it in a UI
             </p>
-            <a href="https://dishdash.cloudyio.me" class="btn btn-secondary mt-9">View Project</a>
+            <a href="https://dishdash.cloudyio.me" class="btn btn-secondary mt-4">View Project</a>
         </div>
-    
-        <div class="p-4 bg-base-300 shadow-md rounded-lg">
-            <img src="/logify.png" alt="Project 2" class="w-full h-40 object-cover rounded-lg">
+        <div class="p-4 bg-base-300 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
+            <img src="/logify.png" alt="Project 3" class="w-full h-40 object-cover rounded-lg">
             <h3 class="font-semibold text-xl mt-4">Logify - WIP</h3>
             <p class="text-sm text-gray-600 mt-2">
                 Logify is a leet code style website that allows you to solve problems to boost your algorithmic thinking.
@@ -186,11 +184,10 @@
         Read my latest blog posts
     </p>
 
-    <ul class="posts grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mt-8 mx-8">
+    <ul class="posts grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mt-8 mx-auto w-full">
         {#each data.posts.slice(0, 3) as post}
-            <li class="post col-span-1 mx-4">
-                <div class="p-6 bg-base-300 shadow-md rounded-lg w-96">
-                    <img src="/blog1.png" alt="Blog Post 1" class="w-full h-40 object-cover rounded-lg">
+            <li class="post col-span-1 mb-8 w-full">
+                <div class="p-6 bg-base-300 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300 w-full">
                     <h3 class="font-semibold text-xl mt-4">{post.title}</h3>
                     <p class="text-sm text-gray-600 mt-2">
                         {post.description}
@@ -198,11 +195,13 @@
                     <p class="text-sm text-gray-500 mt-2">
                         {formatDate(post.date)}
                     </p>
-                    <a href="/blog/understanding-svelte" class="btn btn-secondary mt-4">Read More</a>
+                    <a href="/posts/{post.slug}" class="btn btn-secondary mt-4">Read More</a>
                 </div>
             </li>
         {/each}
     </ul>
+
+    <button class="btn btn-neutral"><a href="posts">View all posts</a></button>
 </div>
 
 <div class="flex flex-col justify-center items-center min-h-screen py-10 bg-base-100 px-4" id="contact">
