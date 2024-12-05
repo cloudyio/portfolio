@@ -23,4 +23,6 @@
 	</div>
   </div>
 
-{@render children()}
+<div class="mt-17">
+	{@render children()}
+</div>

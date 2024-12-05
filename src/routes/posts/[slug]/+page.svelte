@@ -10,7 +10,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<div class="flex flex-col justify-center items-center min-h-screen py-10 bg-base-100 px-4">
+<div class="flex flex-col justify-center items-center min-h-screen py-10 bg-base-100 px-4 pt-26">
 	<article class="w-full max-w-6xl bg-base-300 shadow-md rounded-lg p-6">
 		<hgroup class="text-center">
 			<h1 class="font-semibold text-5xl">{data.meta.title}</h1>
